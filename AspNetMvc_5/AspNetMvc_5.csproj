@@ -222,6 +222,7 @@
     <Content Include="Views\BILLS\Details.cshtml" />
     <Content Include="Views\BILLS\Edit.cshtml" />
     <Content Include="Views\BILLS\Index.cshtml" />
+    <Content Include="Views\Home\Bills.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

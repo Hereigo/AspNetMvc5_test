@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using AspNetMvc_5;
-
-namespace AspNetMvc_5.Controllers
+﻿namespace AspNetMvc_5.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Data.Entity;
+    using System.Linq;
+    using System.Net;
+    using System.Web;
+    using System.Web.Mvc;
+    using AspNetMvc_5;
+
     public class BILLSController : Controller
     {
         private Andrew2Context db = new Andrew2Context();

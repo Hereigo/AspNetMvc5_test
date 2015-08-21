@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-namespace AspNetMvc_5.Controllers
+﻿namespace AspNetMvc_5.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Data.Entity;
+    using System.Linq;
+    using System.Web;
+    using System.Web.Mvc;
+
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -25,6 +27,15 @@ namespace AspNetMvc_5.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        // Moved From BillsController For Public Access :
+        private Andrew2Context db = new Andrew2Context();
+
+        public ActionResult Bills()
+        {
+            var bILLS = db.BILLS.Include(b => b.CONTRAGENTS).Include(b => b.PERIODS).Include(b => b.TYPESOFDOC);
+            return View(bILLS.ToList());
         }
     }
 }
